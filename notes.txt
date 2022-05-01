@@ -1,0 +1,124 @@
+https://ipfs.io/ipfs/QmRF2B8gotBTWidw34uwSyF9egEu88Jkhgviu6rrD1U6V6/177.json
+
+{
+    "name": "Shadowy Super Coder #123",
+    "description": "The path is wild and untraveled; yet by working together, we go further.\nWe blaze trails. We build bridges.\nA better world awaits.\nDAOpunks lead the way.",
+    "image": "ipfs://QmSpgHzwrgm6NgUDzGCy81u12Ggpc7hhYgx5vNH9NY6ipq",
+    "attributes": [
+        {
+            "trait_type": "Archetype",
+            "value": "Shadowy Super Coder"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Digital Gold"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Utility Hoodie"
+        },
+        {
+            "trait_type": "Graphic",
+            "value": "Free the Humans"
+        }
+    ]
+}
+
+
+https://ipfs.io/ipfs/QmRF2B8gotBTWidw34uwSyF9egEu88Jkhgviu6rrD1U6V6/88.json
+
+{
+    "name": "ANON #7",
+    "description": "The path is wild and untraveled; yet by working together, we go further.\nWe blaze trails. We build bridges.\nA better world awaits.\nDAOpunks lead the way.",
+    "image": "ipfs://QmRDrd6Jae52qJXXrXQVCRguNYs33YJq7hdAmBseLmaLoo",
+    "attributes": [
+        {
+            "trait_type": "Archetype",
+            "value": "ANON"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Digital Gold"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Cypherpunk"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Heart Sunglasses"
+        },
+        {
+            "trait_type": "Bonus",
+            "value": "Mask"
+        },
+        {
+            "trait_type": "Graphic",
+            "value": "DEGEN Red"
+        }
+    ]
+}
+
+https://ipfs.io/ipfs/QmRF2B8gotBTWidw34uwSyF9egEu88Jkhgviu6rrD1U6V6/220.json
+
+{
+    "name": "Crypto Native #177",
+    "description": "The path is wild and untraveled; yet by working together, we go further.\nWe blaze trails. We build bridges.\nA better world awaits.\nDAOpunks lead the way.",
+    "image": "ipfs://QmcTWF7cq8DnvcuxN9XFngBfns835H9QLRh6RQdfMTgCdB",
+    "attributes": [
+        {
+            "trait_type": "Archetype",
+            "value": "Crypto Native"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Unicorn Pink"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Streetwear"
+        },
+        {
+            "trait_type": "Color",
+            "value": "Rainbow Tie Dye Shorts"
+        },
+        {
+            "trait_type": "Graphic",
+            "value": "TAO DAO"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Robot Blue"
+        }
+    ]
+}
+
+https://ipfs.io/ipfs/QmRF2B8gotBTWidw34uwSyF9egEu88Jkhgviu6rrD1U6V6/477.json
+
+{
+    "name": "Creative #177",
+    "description": "The path is wild and untraveled; yet by working together, we go further.\nWe blaze trails. We build bridges.\nA better world awaits.\nDAOpunks lead the way.",
+    "image": "ipfs://QmRN1P8iGzN3v9jrHXecbATYAnm4gFSJtaEVcgtPErVbf1",
+    "attributes": [
+        {
+            "trait_type": "Archetype",
+            "value": "Creative"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Digital Gold"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Memelord Trailblazer - Ecosystem Green"
+        },
+        {
+            "trait_type": "Graphic",
+            "value": "Headed West"
+        },
+        {
+            "trait_type": "BODY",
+            "value": "Shard"
+        }
+    ]
+}

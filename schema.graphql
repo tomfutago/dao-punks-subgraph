@@ -1,26 +1,85 @@
-type Approval @entity {
+type _Schema_
+  @fulltext(
+    name: "daoPunkSearch"
+    language: en
+    algorithm: rank
+    include: [{
+      entity: "DAOpunk",
+      fields: [
+        { name: "name" }, { name: "archetype" }, { name: "background" }, { name: "graphic" }, { name: "color" },
+        { name: "clothes" }, { name: "body" }, { name: "head" }, { name: "bonus" }
+      ]
+    }]
+  )
+
+type Project @entity {
   id: ID!
-  owner: Bytes! # address
-  approved: Bytes! # address
-  tokenId: BigInt! # uint256
+  name: String!
+  symbol: String!
+  totalMinted: BigInt!
+  totalSales: BigInt!
+  totalTransfers: BigInt!
+  totalSalesWei: BigInt!
+  avgSaleWei: BigInt!
+  nfts: [DAOpunk!]! @derivedFrom(field: "project")
+  transfers: [TransferEvent!]! @derivedFrom(field: "project")
+  buyers: [Account!]!
+  sellers: [Account!]!
 }
 
-type ApprovalForAll @entity {
+type Account @entity {
   id: ID!
-  owner: Bytes! # address
-  operator: Bytes! # address
-  approved: Boolean! # bool
+  totalBought: BigInt!
+  totalBoughtWei: BigInt!
+  totalSold: BigInt!
+  totalSoldWei: BigInt!
+  avgBoughtWei: BigInt!
+  avgSoldWei: BigInt!
+  totalSent: BigInt!
+  totalReceived: BigInt!
+  nft: [DAOpunk!] @derivedFrom(field: "currentOwner")
+  sent: [TransferEvent!]! @derivedFrom(field: "from")
+  received: [TransferEvent!]! @derivedFrom(field: "to")
 }
 
-type OwnershipTransferred @entity {
+type DAOpunk @entity {
   id: ID!
-  previousOwner: Bytes! # address
-  newOwner: Bytes! # address
+  project: Project!
+  currentOwner: Account!
+  totalSales: BigInt!
+  totalSalesWei: BigInt!
+  avgSaleWei: BigInt!
+  totalTransfers: BigInt!
+  transfers: [TransferEvent!]! @derivedFrom(field: "nft")
+  block: BigInt!
+  hash: Bytes!
+  timestamp: BigInt!
+  tokenID: BigInt!
+  tokenURI: String!
+  image: String!
+  animation_url: String!
+  name: String!
+  archetype: String
+  background: String
+  graphic: String
+  color: String
+  clothes: String
+  body: String
+  head: String
+  bonus: String
 }
 
-type Transfer @entity {
+type TransferEvent @entity {
   id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  tokenId: BigInt! # uint256
+  idx: BigInt!
+  project: Project!
+  nft: DAOpunk!
+  amount: BigInt!
+  from: Account!
+  to: Account!
+  block: BigInt!
+  hash: Bytes!
+  timestamp: BigInt!
+  isMint: Boolean!
+  isSale: Boolean!
 }
