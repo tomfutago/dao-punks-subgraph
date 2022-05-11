@@ -1,3 +1,4 @@
+import { Bytes } from "@graphprotocol/graph-ts";
 import { Transfer as TransferEvent } from "../generated/Token/Token";
 import { DAOpunk, Project } from "../generated/schema";
 import { ZERO_ADDRESS } from "./utils/constants";
@@ -20,7 +21,7 @@ export function handleTransfer(event: TransferEvent): void {
   /***** Project *****/
   let project = projects.get(address);
   // sale
-  if (from.toHexString() != ZERO_ADDRESS) {
+  if (from != ZERO_ADDRESS) {
     let seller = accounts.get(from);
     let buyer = accounts.get(to);
     projects.addSeller(project as Project, seller);
@@ -34,7 +35,7 @@ export function handleTransfer(event: TransferEvent): void {
   
   /***** NFT *****/
   let bonsai = nfts.get(
-    tokenId.toString(),
+    Bytes.fromI32(tokenId.toI32()),
     address,
     tokenId,
     block,

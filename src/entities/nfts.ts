@@ -5,7 +5,7 @@ import { ZERO, IPFS_HASH } from "../utils/constants";
 
 /***** NFT functions *****/
 export function get(
-  id: string,
+  id: Bytes,
   contractAddress: Address,
   tokenID: BigInt,
   block: BigInt,
@@ -16,7 +16,7 @@ export function get(
   let daopunk = DAOpunk.load(id);
   if (!daopunk) {
     daopunk = new DAOpunk(id);
-    daopunk.project = contractAddress.toHexString();
+    daopunk.project = contractAddress;
     daopunk.tokenID = tokenID;
     daopunk.block = block;
     daopunk.hash = hash;
@@ -40,11 +40,6 @@ export function get(
         const image = value.get("image");
         if (image) {
           daopunk.image = image.toString();
-        }
-  
-        const animation_url = value.get("animation_url");
-        if (animation_url) {
-          daopunk.animation_url = animation_url.toString();
         }
       }
   
@@ -93,7 +88,7 @@ export function get(
       }
     }
   }
-  daopunk.currentOwner = walletAddress.toHexString();
+  daopunk.currentOwner = walletAddress;
   daopunk.save();
 
   return daopunk as DAOpunk;

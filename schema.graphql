@@ -13,7 +13,7 @@ type _Schema_
   )
 
 type Project @entity {
-  id: ID!
+  id: Bytes!
   name: String!
   symbol: String!
   totalMinted: BigInt!
@@ -28,7 +28,7 @@ type Project @entity {
 }
 
 type Account @entity {
-  id: ID!
+  id: Bytes!
   totalBought: BigInt!
   totalBoughtWei: BigInt!
   totalSold: BigInt!
@@ -43,7 +43,7 @@ type Account @entity {
 }
 
 type DAOpunk @entity {
-  id: ID!
+  id: Bytes!
   project: Project!
   currentOwner: Account!
   totalSales: BigInt!
@@ -57,7 +57,6 @@ type DAOpunk @entity {
   tokenID: BigInt!
   tokenURI: String!
   image: String!
-  animation_url: String!
   name: String!
   archetype: String
   background: String
@@ -69,8 +68,8 @@ type DAOpunk @entity {
   bonus: String
 }
 
-type TransferEvent @entity {
-  id: ID!
+type TransferEvent @entity(immutable: true) {
+  id: Bytes!
   idx: BigInt!
   project: Project!
   nft: DAOpunk!
